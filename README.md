@@ -15,12 +15,15 @@ Entities :
 
 * One abstract class and one interface
 * 3 level of class/interface inheritance 
-* Create methods with all type of visibility (public, ...)
+* Create methods with all type of visibility (public, ...) 
 * 4 or more methods, and 2 or more proprieties in third level classes
+
 ---------
 
 **NOTE! Is not needed to implement real functionalities, in methods you can use just  
 a comment like : // body of method : "Current method"**
+
+---------
 
 ---------
 **INSTALLATION**
