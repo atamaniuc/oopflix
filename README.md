@@ -1,4 +1,3 @@
--------
 Provide code for the core entities and interfaces for a netflix-like project by the following definitions
 Entities :
 
