@@ -33,16 +33,21 @@ Dump auto-loader via `composer dump-autoload`
 ├── app
 │   ├── Core
 │   │   ├── Classes
-│   │   │   └── Entity.php
+│   │   │   ├── AbstractEntity.php
+│   │   │   └── Collection.php
 │   │   ├── Interfaces
+│   │   │   ├── CollectionInterface.php
 │   │   │   └── JsonableInterface.php
 │   │   └── Traits
-│   │       └── VideoInfoProvider.php
+│   │       ├── TitleTrait.php
+│   │       └── VideoInfoProviderTrait.php
 │   └── Entities
+│       ├── Film.php
 │       ├── Subscriber.php
 │       ├── SubscriptionProgram.php
 │       └── Video.php
 ├── composer.json
+├── .gitignore
 ├── index.php
 ├── README.md
 └── vendor
@@ -55,5 +60,6 @@ Dump auto-loader via `composer dump-autoload`
         ├── autoload_static.php
         ├── ClassLoader.php
         └── LICENSE
+
 ```
 ---------
