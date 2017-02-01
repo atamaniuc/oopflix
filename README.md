@@ -24,8 +24,6 @@ Entities :
 a comment like : // body of method : "Current method"**
 
 ---------
-
----------
 **INSTALLATION**
 
 Dump auto-loader via `composer dump-autoload`
