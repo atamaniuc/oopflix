@@ -1,14 +1,15 @@
 <?php namespace Entities;
 
-use Core\Classes\Entity;
-use Core\Traits\VideoInfoProvider;
+use Core\Classes\AbstractEntity;
+use Core\Traits\VideoInfoProviderTrait;
+use Core\Traits\TitleTrait;
 
 /**
  * Class Video
  * @package Entities
  */
-class Video extends Entity {
-	use VideoInfoProvider;
+class Video extends AbstractEntity {
+	use TitleTrait, VideoInfoProviderTrait;
 
 	#region Fields
 
@@ -18,7 +19,7 @@ class Video extends Entity {
 	protected $genre;
 
 	/**
-	 * @var integer
+	 * @var string
 	 */
 	protected $length;
 
@@ -27,53 +28,52 @@ class Video extends Entity {
 	/**
 	 * Video constructor.
 	 *
-	 * @param $title
-	 * @param $genre
-	 * @param $length
+	 * @param string $title
+	 * @param string $genre
+	 * @param string $length
 	 */
-	public function __construct( $title = '', $genre = '', $length = 0 ) {
-		$this->setTitle($title);
-		$this->setGenre($genre);
-		$this->setLength($length);
+	public function __construct( $title = '', $genre = '', $length = '' ) {
+		$this->setTitle( $title );
+		$this->setGenre( $genre );
+		$this->setLength( $length );
 	}
 
 	#region Getters and Setters
 
 	/**
-	 * @overridden
-	 *
-	 * @return mixed
-	 */
-	public function getTitle() {
-		return urlencode($this->title);
-	}
-
-	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function getGenre() {
 		return $this->genre;
 	}
 
 	/**
-	 * @param mixed $genre
+	 * @param $genre
+	 *
+	 * @return $this
 	 */
 	public function setGenre( $genre ) {
 		$this->genre = $genre;
+
+		return $this;
 	}
 
 	/**
-	 * @return mixed
+	 * @return integer
 	 */
 	public function getLength() {
 		return $this->length;
 	}
 
 	/**
-	 * @param mixed $length
+	 * @param $length
+	 *
+	 * @return $this
 	 */
 	public function setLength( $length ) {
 		$this->length = $length;
+
+		return $this;
 	}
 
 	#endregion
