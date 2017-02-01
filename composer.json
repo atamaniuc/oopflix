@@ -1,0 +1,32 @@
+{
+  "name": "Acme/oopflix",
+  "description": "test example",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Na1k0n",
+      "email": "d.atamaniuc@gmail.com"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "app/Core/Classes",
+      "app/Core/Interfaces",
+      "app/Core/Traits",
+      "app/Entities"
+    ],
+    "psr-4": {
+      "Classes\\": "app/Core/Classes",
+      "Inerfaces\\": "app/Core/Interfaces",
+      "Traits\\": "app/Core/Traits",
+      "Entities\\": "app/Entities"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Seldaek/monolog"
+    }
+  ]
+}
